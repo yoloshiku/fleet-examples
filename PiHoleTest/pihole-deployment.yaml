@@ -1,1 +1,25 @@
-
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pihole
+spec:
+  selector:
+    matchLabels:
+      app: pihole
+      tier: frontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: pihole
+        tier: frontend
+    spec:
+      containers:
+      - name: pihole
+        image: pihole/pihole:latest
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        ports:
+        - containerPort: 80
