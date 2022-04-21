@@ -5,13 +5,13 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: pihole
+      app2: pihole
       tier: frontend
   replicas: 1
   template:
     metadata:
       labels:
-        app: pihole
+        app2: pihole
         tier: frontend
     spec:
       containers:
