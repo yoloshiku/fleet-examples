@@ -3,12 +3,12 @@ kind: Service
 metadata:
   name: pihole
   labels:
-    app: pihole
+    app2: pihole
     tier: frontend
 spec:
   type: NodePort
   ports:
   - port: 80
   selector:
-    app: pihole
+    app2: pihole
     tier: frontend
