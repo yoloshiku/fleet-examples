@@ -1,18 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ocipihole
+  name: oci-pihole
+  labels:
+    app: pihole
 spec:
+  replicas: 1
   selector:
     matchLabels:
-      app: simpleapp
-      tier: frontend
-  replicas: 1
+      app: pihole
   template:
+    metadata:
+      labels:
+        app: pihole
     spec:
       containers:
       - name: pihole
         image: pihole/pihole
-        resources:
         ports:
         - containerPort: 80
