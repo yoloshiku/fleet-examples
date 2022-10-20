@@ -15,10 +15,11 @@ spec:
         app: pihole
     spec:
       containers:
+      - env:
+        - name: WEBPASSWORD
+          value: "123456"
       - name: pihole
         image: pihole/pihole
         ports:
         - containerPort: 80
-      - env:
-        - name: WEBPASSWORD
-          value: "123456"
+      
