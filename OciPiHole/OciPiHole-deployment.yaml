@@ -5,7 +5,8 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: ocipihole
+      app: simpleapp
+      tier: frontend
   replicas: 1
   template:
     spec:
