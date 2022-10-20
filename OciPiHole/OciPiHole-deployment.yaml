@@ -22,7 +22,4 @@ spec:
       image: pihole/pihole
       ports:
         - containerPort: 80
-          hostPort: 30003
-          name: http
-          protocol: TCP
       
