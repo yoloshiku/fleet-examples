@@ -20,6 +20,6 @@ spec:
         env:
         - name: WEBPASSWORD
           value: "123456"
-      ports:
+        ports:
         - containerPort: 80
       
