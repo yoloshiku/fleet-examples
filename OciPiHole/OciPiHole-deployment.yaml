@@ -21,14 +21,6 @@ spec:
       name: pihole
       image: pihole/pihole
       ports:
-        - containerPort: 53
-          hostPort: 53
-          name: tcp
-          protocol: TCP
-        - containerPort: 53
-          hostPort: 53
-          name: udp
-          protocol: UDP
         - containerPort: 80
           hostPort: 30003
           name: http
