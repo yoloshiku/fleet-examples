@@ -19,4 +19,6 @@ spec:
         image: pihole/pihole
         ports:
         - containerPort: 80
-        
+      - env:
+        - name: WEBPASSWORD
+          value: "123456"
