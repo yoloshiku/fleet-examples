@@ -3,6 +3,9 @@ kind: Deployment
 metadata:
   name: ocipihole
 spec:
+  selector:
+    matchLabels:
+      app: ocipihole
   replicas: 1
   template:
     spec:
