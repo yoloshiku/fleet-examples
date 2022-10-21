@@ -20,6 +20,8 @@ spec:
         env:
         - name: WEBPASSWORD
           value: "123456"
+          name: TZ
+          value: "America/NewYork"
         ports:
         - containerPort: 53
           hostPort: 53
@@ -33,4 +35,17 @@ spec:
           hostPort: 30003
           name: http
           protocol: TCP
-      
+        volumeMounts:
+        - name: etc
+          mountPath: /etc/pihole
+        - name: dnsmasq
+          mountPath: /etc/dnsmasq.d
+      volumes:
+        - name: etc
+          hostPath:
+          path: /data/pihole/etc
+          type: Directory
+        - name: dnsmasq
+          hostPath:
+          path: /data/pihole/dnsmasq.d
+          type: Directory
