@@ -41,6 +41,7 @@ spec:
         - name: dnsmasq
           mountPath: /etc/dnsmasq.d
       volumes:
+      #Volumes refered to the host folder, needs to be created first
         - name: etc
           hostPath:
             path: /etc/pihole
