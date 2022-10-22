@@ -43,11 +43,11 @@ spec:
       volumes:
         - name: etc
           hostPath:
-            path: /data/pihole/etc
+            path: /etc/pihole
             type: Directory
         - name: dnsmasq
           hostPath:
-            path: /data/pihole/dnsmasq.d
+            path: /etc/dnsmasq.d
             type: Directory
       securityContext:
         fsGroupChangePolicy: "OnRootMismatch"
