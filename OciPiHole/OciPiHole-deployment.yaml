@@ -49,3 +49,5 @@ spec:
           hostPath:
             path: /data/pihole/dnsmasq.d
             type: Directory
+      securityContext:
+        fsGroupChangePolicy: "OnRootMismatch"
