@@ -23,3 +23,6 @@ spec:
             memory: 100Mi
         ports:
         - containerPort: 80
+          hostPort: 30001
+          name: http
+          protocol: TCP
